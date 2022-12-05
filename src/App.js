@@ -29,7 +29,20 @@ const handleClick = async () => {
     frequencyMap[element] += 1;
   })
 
-  console.log(frequencyMap);
+  // Tried to sort the map but failed,
+  // Hence copying the complete frequencyMap into a new
+  // array and sort the array according to the second element
+  var frequencyArray = Object.keys(frequencyMap).map(function (key) {
+    return [key, frequencyMap[key]];
+  });
+
+  // Sort the frequencyArray according to count
+  frequencyArray.sort(function (a, b) {
+    return a[1] - b[1];
+  });
+
+  console.log(frequencyArray);
+
 }
 
 function App() {
