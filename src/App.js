@@ -1,7 +1,13 @@
+import "./App.css";
+
 function App() {
   return (
     <div className="App">
-      Hi
+      <div className="button-container">
+        <button className="button">
+          Submit
+        </button>
+      </div>
     </div>
   );
 }
