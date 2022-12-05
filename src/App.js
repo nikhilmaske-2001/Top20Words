@@ -38,11 +38,12 @@ const handleClick = async () => {
 
   // Sort the frequencyArray according to count
   frequencyArray.sort(function (a, b) {
-    return a[1] - b[1];
+    return b[1] - a[1];
   });
 
-  console.log(frequencyArray);
-
+  // Pickup only the top 20 items from the frequency array
+  const top20Words = frequencyArray.slice(0, 20);
+  console.log(top20Words);
 }
 
 function App() {
